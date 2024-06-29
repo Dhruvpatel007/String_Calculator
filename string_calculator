@@ -13,6 +13,19 @@ function add(numbers) {
    // Replace new lines with the delimiter
    numbers = numbers.replace(/\n/g, delimiter);
 
+// Split the numbers by the delimiter and calculate sum
+   const numberArray = numbers.split(delimiter);
+   let sum = 0;
+   const negatives = [];
+   for (let numStr of numberArray) {
+       const num = parseInt(numStr.trim());
+       if (num < 0) {
+           negatives.push(numStr);
+       } else if (num <= 1000) { // Ignore numbers larger than 1000
+           sum += num;
+       }
+   }
+
    // Test cases
 console.log(add(""));        // Output: 0
 console.log(add("1"));       // Output: 1

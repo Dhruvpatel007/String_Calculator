@@ -26,6 +26,13 @@ function add(numbers) {
        }
    }
 
+ // If there are negative numbers, throw exception
+   if (negatives.length > 0) {
+       throw new Error("negative numbers not allowed " + negatives.join(","));
+   }
+   return sum;
+}
+
    // Test cases
 console.log(add(""));        // Output: 0
 console.log(add("1"));       // Output: 1

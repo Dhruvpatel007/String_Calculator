@@ -1,0 +1,7 @@
+function add(numbers) {
+   if (numbers === "") {
+       return 0;
+   }
+
+   // Test cases
+console.log(add(""));        // Output: 0

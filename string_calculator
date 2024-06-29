@@ -34,7 +34,13 @@ function add(numbers) {
 }
 
    // Test cases
-console.log(add(""));        // Output: 0
-console.log(add("1"));       // Output: 1
-console.log(add("1,5"));     // Output: 6
-console.log(add("1\n2,3"));  // Output: 6
+console.log(add(""));       
+console.log(add("1"));      
+console.log(add("1,5"));     
+console.log(add("1\n2,3"));  
+console.log(add("//;\n1;2")); 
+try {
+   console.log(add("-1,2,-3,4")); // Throws exception
+} catch (error) {
+   console.log(error.message); 
+}
